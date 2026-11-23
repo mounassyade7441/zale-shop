@@ -1,0 +1,4 @@
+Déposez ici vos propres photos (logo, bannières, mannequins…).
+Elles seront accessibles à l'adresse /images/nom-du-fichier.jpg
+Vous pouvez ensuite coller cette adresse dans l'admin (Paramètres ou Produits).
+Les photos envoyées depuis l'admin sont, elles, rangées dans frontend/uploads/.

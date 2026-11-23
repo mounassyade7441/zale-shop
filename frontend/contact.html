@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FBF9F6">
+  <title>Contact & boutique | Zale Shop International</title>
+  <meta name="description" content="Contactez Zale Shop International par WhatsApp, e-mail ou rendez-nous visite en boutique à Colobane, Dakar. Livraison partout au Sénégal.">
+  <link rel="icon" href="/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=3">
+</head>
+<body>
+  <div id="header"></div>
+  <main id="contenu">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span class="sep">/</span><a href="/contact.html">Contact</a></nav>
+        <p class="eyebrow mb-2">À votre écoute</p>
+        <h1 class="fade-up">Contact</h1>
+        <p class="lead fade-up">Une question sur une taille, une commande ou une livraison ? Nous vous répondons avec plaisir.</p>
+      </div>
+    </section>
+
+    <div class="container contact-layout">
+      <div>
+        <a class="wa-card" id="wa-card" target="_blank" rel="noopener noreferrer">
+          <span data-icon="whatsapp"></span>
+          <span>
+            <span class="xs" style="display:block;letter-spacing:.2em;text-transform:uppercase;opacity:.9">Réponse rapide</span>
+            <span class="serif" style="display:block;font-size:24px">Écrivez-nous sur WhatsApp</span>
+            <span class="small" data-shop="phoneDisplay"></span>
+          </span>
+        </a>
+        <ul class="contact-list">
+          <li><span data-icon="pin"></span><div><p class="label">Boutique</p><p><span data-shop="address"></span><br><span data-shop="city"></span></p><a id="maps-link" class="small underline" target="_blank" rel="noopener noreferrer">Itinéraire →</a></div></li>
+          <li><span data-icon="phone"></span><div><p class="label">Téléphone</p><a id="tel-link" data-shop="phoneDisplay"></a></div></li>
+          <li id="mail-item"><span data-icon="mail"></span><div><p class="label">E-mail</p><a id="mail-link" data-shop="email"></a></div></li>
+          <li><span data-icon="clock"></span><div><p class="label">Horaires</p><p data-shop="openingHours"></p></div></li>
+        </ul>
+        <p class="label mt-10 mb-4">Suivez-nous</p>
+        <div class="social-pills" id="socials"></div>
+      </div>
+
+      <div>
+        <h2 class="title">Envoyez-nous un message</h2>
+        <p class="small muted mt-2">Nous vous répondons sous 24 h ouvrées.</p>
+        <form id="contact-form" class="form-grid cols-2 mt-8" novalidate>
+          <div class="span-2"><label for="c-name" class="label">Nom *</label><input id="c-name" name="name" class="field" required autocomplete="name"></div>
+          <div><label for="c-phone" class="label">Téléphone</label><input id="c-phone" name="phone" type="tel" class="field" autocomplete="tel"></div>
+          <div><label for="c-email" class="label">E-mail</label><input id="c-email" name="email" type="email" class="field" autocomplete="email"></div>
+          <div class="span-2"><label for="c-subject" class="label">Sujet</label>
+            <select id="c-subject" name="subject" class="field">
+              <option>Question sur un article</option><option>Suivi de commande</option><option>Partenariat / presse</option><option>Autre</option>
+            </select></div>
+          <div class="span-2"><label for="c-message" class="label">Message *</label><textarea id="c-message" name="message" rows="6" maxlength="3000" class="field" required></textarea></div>
+          <p class="alert-error span-2 hidden" id="contact-error" role="alert"></p>
+          <div class="span-2"><button type="submit" class="btn btn-dark">Envoyer le message</button></div>
+        </form>
+      </div>
+    </div>
+
+    <section id="livraison" class="bg-cream-light" style="scroll-margin-top:100px">
+      <div class="container section two-cols">
+        <div>
+          <p class="eyebrow mb-2">Livraison</p>
+          <h2 class="title">Partout au Sénégal</h2>
+          <ul class="lines mt-6" id="zones"></ul>
+          <p class="small soft mt-4" id="free-from"></p>
+        </div>
+        <div>
+          <p class="eyebrow mb-2">Paiement</p>
+          <h2 class="title">En toute sérénité</h2>
+          <p class="small soft mt-6" style="line-height:1.8">Réglez votre commande en toute simplicité par Wave ou Orange Money. Vous recevez la confirmation de votre commande sur WhatsApp.</p>
+        </div>
+      </div>
+    </section>
+    <div class="map" id="map"></div>
+  </main>
+  <div id="footer"></div>
+  <script type="module" src="/js/pages/contact.js?v=3"></script>
+</body>
+</html>

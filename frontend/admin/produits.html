@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Produits | Admin</title>
+  <link rel="icon" href="/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=3">
+  <link rel="stylesheet" href="/css/admin.css?v=3">
+</head>
+<body class="admin-loading">
+  <div class="page-title"><div><h1>Produits</h1><p class="small muted mt-1" id="subtitle"></p></div>
+    <div class="actions"><a href="/admin/produit.html" class="btn btn-dark">+ Nouveau produit</a></div></div>
+  <div class="box flush">
+    <div class="tools"><label class="searchbox"><span class="sr-only">Rechercher</span><input id="q" type="search" placeholder="Rechercher un produit…"></label>
+      <select id="cat" class="field" aria-label="Filtrer par catégorie"><option value="">Toutes les catégories</option></select></div>
+    <div id="list"><p class="muted" style="padding:40px;text-align:center">Chargement…</p></div>
+  </div>
+  <script type="module" src="/js/admin/products.js?v=3"></script>
+</body>
+</html>

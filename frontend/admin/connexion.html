@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Connexion | Admin</title>
+  <link rel="icon" href="/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=3">
+  <link rel="stylesheet" href="/css/admin.css?v=3">
+</head>
+<body>
+  <div class="login">
+    <div class="login-card">
+      <div class="text-center mb-10">
+        <p class="serif" style="font-size:38px;letter-spacing:.3em" id="brand">NAËLLE</p>
+        <p class="eyebrow mt-2">Espace administrateur</p>
+      </div>
+      <form id="login">
+        <p class="small soft">🔒 Accès sécurisé</p>
+        <div><label for="password" class="label">Mot de passe</label>
+          <input id="password" type="password" class="field" required autocomplete="current-password"></div>
+        <p class="alert-error hidden" id="error" role="alert"></p>
+        <button type="submit" class="btn btn-dark btn-block">Se connecter</button>
+        <p class="xs muted" style="border-top:1px solid var(--line);padding-top:14px">Mot de passe oublié ? Indiquez-le dans backend/.env (ADMIN_PASSWORD), puis lancez « npm run reset-password ».</p>
+      </form>
+      <p class="text-center small mt-6"><a href="/" class="muted underline">← Retour à la boutique</a></p>
+    </div>
+  </div>
+  <script type="module" src="/js/admin/login.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FBF9F6">
+  <title>Zale Shop International — Mode féminine à Dakar</title>
+  <meta name="description" content="Zale Shop International, mode féminine à Colobane (Dakar) : robes et ensembles élégants et tendance. Livraison partout au Sénégal, paiement par Wave et Orange Money.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Zale Shop International — La mode féminine élégante et tendance">
+  <meta property="og:description" content="Mode féminine à Colobane, Dakar. Livraison partout au Sénégal.">
+  <meta property="og:image" content="/images/banniere-accueil.jpg">
+  <link rel="icon" href="/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=3">
+</head>
+<body>
+  <div id="header"></div>
+
+  <main id="contenu">
+    <!-- ============ BANNIÈRE IMAGE (modifiable dans Admin › Paramètres › Bannière d'accueil) ============ -->
+    <section class="hero-banner hidden" id="hero-banner"></section>
+
+    <!-- ============ BANNIÈRE TEXTE + 3 PHOTOS (utilisée si aucune bannière image n'est définie) ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-images" id="hero-images"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow fade-up" id="hero-eyebrow"></p>
+        <h1 class="fade-up d1"><span id="hero-title"></span><br><em id="hero-italic"></em></h1>
+        <p class="fade-up d2" id="hero-text"></p>
+        <div class="hero-actions fade-up d3">
+          <a href="/boutique.html" class="btn btn-light" id="hero-button">Découvrir la collection</a>
+          <a href="/nouveautes.html" class="btn btn-outline-light">Nouveautés</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CATÉGORIES ============ -->
+    <section class="container section">
+      <div class="text-center mb-10 reveal">
+        <p class="eyebrow mb-2">Explorer</p>
+        <h2 class="title">Achetez par catégorie</h2>
+      </div>
+      <div class="categories" id="categories"></div>
+    </section>
+
+    <!-- ============ NOUVEAUTÉS ============ -->
+    <section class="container" style="padding-bottom:64px">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">Fraîchement arrivées</p><h2 class="title">Nouveautés</h2></div>
+        <a href="/nouveautes.html" class="more-link"><span class="link">Tout voir</span> <span data-icon="arrow"></span></a>
+      </div>
+      <div class="grid-products cols-4" id="new-products"></div>
+    </section>
+
+    <!-- ============ COLLECTION À LA UNE ============ -->
+    <section class="bg-cream" id="featured"></section>
+
+    <!-- ============ MEILLEURES VENTES ============ -->
+    <section class="container section">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">Les préférées de nos clientes</p><h2 class="title">Meilleures ventes</h2></div>
+        <a href="/boutique.html?tri=popularite" class="more-link"><span class="link">Voir la boutique</span> <span data-icon="arrow"></span></a>
+      </div>
+      <div class="grid-products cols-4" id="best-products"></div>
+    </section>
+
+    <!-- ============ COLLECTIONS ============ -->
+    <section class="container" style="padding-bottom:80px">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">Univers</p><h2 class="title">Nos collections</h2></div>
+        <a href="/collections.html" class="more-link"><span class="link">Toutes les collections</span> <span data-icon="arrow"></span></a>
+      </div>
+      <div class="collections-grid" id="collections"></div>
+    </section>
+
+    <!-- ============ PROMOTIONS ============ -->
+    <section class="bg-ink" id="promo-section">
+      <div class="container promo-band">
+        <div class="reveal">
+          <p class="eyebrow mb-4" id="promo-eyebrow"></p>
+          <h2><span id="promo-title"></span><br><em id="promo-subtitle"></em></h2>
+          <p class="mt-4" style="max-width:440px;color:rgba(243,236,226,.7)" id="promo-text"></p>
+          <div class="countdown" id="countdown" aria-label="Temps restant avant la fin des promotions"></div>
+          <a href="/promotions.html" class="btn btn-gold mt-10">Profiter des promotions</a>
+        </div>
+        <div class="grid-products reveal" id="promo-products"></div>
+      </div>
+    </section>
+
+    <!-- ============ AVANTAGES ============ -->
+    <section class="bg-cream-light" style="border-bottom:1px solid var(--line)">
+      <div class="container perks">
+        <div class="perk reveal"><span data-icon="truck"></span><h3>Livraison rapide</h3><p id="perk-delivery">24 h à Dakar</p></div>
+        <div class="perk reveal"><span class="perk-logos"><img src="/images/paiements/wave.jpg" alt="Wave"><img src="/images/paiements/orange-money.jpg" alt="Orange Money"></span><h3>Wave & Orange Money</h3><p>Paiement mobile simple et sécurisé</p></div>
+        <div class="perk reveal"><span data-icon="gem"></span><h3>Qualité sélectionnée</h3><p>Des matières choisies avec exigence</p></div>
+      </div>
+    </section>
+
+    <!-- ============ AVIS CLIENTES ============ -->
+    <section class="container section">
+      <div class="text-center mb-10 reveal">
+        <p class="eyebrow mb-2">Elles nous font confiance</p>
+        <h2 class="title">Mots de clientes</h2>
+      </div>
+      <div class="testimonials" id="testimonials"></div>
+    </section>
+
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="bg-blush">
+      <div class="container newsletter">
+        <div class="newsletter-text reveal">
+          <p class="eyebrow mb-4">Le cercle Zale Shop International</p>
+          <h2 class="title">Recevez nos nouveautés<br><em>en avant-première</em></h2>
+          <p class="soft mt-4 mb-6" style="max-width:440px">Inscrivez-vous pour découvrir nos arrivages en premier et profiter d'offres exclusives et d'accès anticipés aux ventes privées.</p>
+          <form class="newsletter-form" id="newsletter">
+            <label for="nl-email" class="sr-only">Adresse e-mail</label>
+            <input id="nl-email" type="email" required placeholder="Votre adresse e-mail">
+            <button type="submit">S'inscrire</button>
+          </form>
+          <p class="xs muted mt-3" id="newsletter-msg">En vous inscrivant, vous acceptez de recevoir nos e-mails. Désinscription en un clic.</p>
+        </div>
+        <div class="newsletter-media" id="newsletter-media"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script type="module" src="/js/pages/home.js?v=3"></script>
+</body>
+</html>

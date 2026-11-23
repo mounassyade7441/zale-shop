@@ -1,0 +1,14 @@
+{
+  "name": "zale-shop",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Zale Shop International — frontend HTML/CSS/JS + backend Laravel",
+  "scripts": {
+    "start": "node scripts/lancer.mjs",
+    "dev": "node scripts/lancer.mjs",
+    "install-all": "node scripts/lancer.mjs install",
+    "artisan": "node scripts/lancer.mjs artisan",
+    "reset": "node scripts/lancer.mjs artisan boutique:reset --force",
+    "reset-password": "node scripts/lancer.mjs artisan boutique:reset-password"
+  }
+}
