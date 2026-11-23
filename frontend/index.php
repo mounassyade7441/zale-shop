@@ -11,7 +11,9 @@ use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
 
-$backend = __DIR__.'/../backend';
+// En local : frontend/ et backend/ côte à côte.
+// En ligne (hébergement à un seul dossier, ex. InfinityFree) : backend/ est DANS le dossier du site.
+$backend = is_dir(__DIR__.'/backend') ? __DIR__.'/backend' : __DIR__.'/../backend';
 
 // Mode maintenance (php artisan down)
 if (file_exists($maintenance = $backend.'/storage/framework/maintenance.php')) {

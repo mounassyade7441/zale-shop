@@ -23,6 +23,8 @@ $app = Application::configure(basePath: dirname(__DIR__))
     })->create();
 
 // Le dossier public de Laravel est le dossier du site : ../frontend
-$app->usePublicPath(dirname(__DIR__, 2).DIRECTORY_SEPARATOR.'frontend');
+// (en ligne sur un hébergement à un seul dossier, backend/ est dans le dossier du site : on prend le dossier parent)
+$frontend = dirname(__DIR__, 2).DIRECTORY_SEPARATOR.'frontend';
+$app->usePublicPath(is_dir($frontend) ? $frontend : dirname(__DIR__, 2));
 
 return $app;

@@ -5,3 +5,5 @@ backend/database/*.sqlite
 backend/storage/*.key
 frontend/uploads/*
 !frontend/uploads/.gitkeep
+
+mise-en-ligne/
