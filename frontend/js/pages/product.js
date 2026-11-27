@@ -108,7 +108,7 @@ main.innerHTML = `
 </div>
 <section class="container section" id="related" style="border-top:1px solid var(--line)"></section>`;
 
-/* ------------------------------ Interactions ------------------------------ */
+/* Interactions */
 const slider = $("#slider");
 function go(i) {
   sel.index = (i + images.length) % images.length;
@@ -173,7 +173,7 @@ info.addEventListener("click", (e) => {
   updateWa();
 });
 
-/* ------------------------------ Zoom plein écran ------------------------------ */
+/* Zoom plein écran */
 function openLightbox() {
   const box = document.createElement("div");
   box.className = "lightbox";
@@ -226,7 +226,7 @@ function openLightbox() {
   render();
 }
 
-/* ------------------------------ Guide des tailles ------------------------------ */
+/* Guide des tailles */
 function openSizeGuide() {
   const rows = [["XS", "34", "80–83", "62–65", "88–91"], ["S", "36", "84–87", "66–69", "92–95"], ["M", "38", "88–92", "70–74", "96–100"], ["L", "40", "93–97", "75–79", "101–105"], ["XL", "42", "98–103", "80–85", "106–111"], ["XXL", "44", "104–110", "86–92", "112–118"]];
   const m = document.createElement("div");
@@ -242,7 +242,7 @@ function openSizeGuide() {
   m.addEventListener("click", (e) => e.target.closest("[data-close]") && m.remove());
 }
 
-/* ------------------------------ Articles associés ------------------------------ */
+/* Articles associés */
 const all = await loadProducts();
 const related = all
   .filter((x) => x.id !== p.id && (x.category === p.category || (p.collection && x.collection === p.collection)))

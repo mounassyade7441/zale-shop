@@ -23,7 +23,7 @@ const set = (path, value) => {
   obj[last] = value;
 };
 
-/* ------------------------------ Petits gabarits ------------------------------ */
+/* Petits gabarits */
 const field = (path, label, { type = "text", placeholder = "", span = false, hint = "" } = {}) =>
   `<div class="${span ? "span-2" : ""}"><label class="label" for="f-${path}">${label}</label>
    ${type === "textarea" ? `<textarea class="field" id="f-${path}" data-path="${path}" rows="3">${esc(get(path) ?? "")}</textarea>` : `<input class="field" id="f-${path}" data-path="${path}" type="${type}" value="${esc(get(path) ?? "")}" placeholder="${esc(placeholder)}">`}
@@ -39,7 +39,7 @@ function render() {
   <form id="form" novalidate>
     ${section("Identité de la boutique", `<div class="form-grid cols-2">
       ${field("name", "Nom complet", { placeholder: "Zale Shop International" })}
-      ${field("shortName", "Nom du logo", { placeholder: "NAËLLE" })}
+      ${field("shortName", "Nom du logo", { placeholder: "ZALE SHOP" })}
       ${field("baseline", "Sous-titre du logo", { placeholder: "International" })}
       ${field("currency", "Devise", { placeholder: "FCFA" })}
       ${field("description", "Description (référencement Google)", { type: "textarea", span: true })}
@@ -160,7 +160,7 @@ function collect() {
 
 render();
 
-/* ------------------------------ Événements ------------------------------ */
+/* Événements */
 document.addEventListener("click", async (e) => {
   const b = e.target.closest("button");
   if (!b) return;

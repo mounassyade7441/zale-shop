@@ -1,9 +1,9 @@
-/* =====================================================================
+/*
    Outils partagés par toutes les pages : API, formatage, panier,
    favoris, notifications, icônes.
-   ===================================================================== */
+ */
 
-/* ------------------------------ API ------------------------------ */
+/* API */
 export async function api(path, { method = "GET", body } = {}) {
   const res = await fetch(`/api${path}`, {
     method,
@@ -26,7 +26,7 @@ export const loadConfig = () => (configPromise ??= api("/config"));
 let productsPromise;
 export const loadProducts = () => (productsPromise ??= api("/products"));
 
-/* ------------------------------ Formatage ------------------------------ */
+/* Formatage */
 export let CURRENCY = "FCFA";
 export const setCurrency = (c) => (CURRENCY = c || "FCFA");
 export const money = (n) => `${new Intl.NumberFormat("fr-FR").format(Math.round(n)).replace(/ | /g, " ")} ${CURRENCY}`;
@@ -126,7 +126,7 @@ if (typeof document !== "undefined" && !IS_MOBILE) {
   });
 }
 
-/* ------------------------------ Stockage local ------------------------------ */
+/* Stockage local */
 const read = (k, d) => {
   try {
     return JSON.parse(localStorage.getItem(k)) ?? d;
@@ -141,7 +141,7 @@ const write = (k, v) => {
 };
 const emit = (name) => window.dispatchEvent(new CustomEvent(name));
 
-/* ------------------------------ Panier ------------------------------ */
+/* Panier */
 export const cart = {
   items: () => read("mn_cart", []),
   count: () => cart.items().reduce((s, i) => s + i.quantity, 0),
@@ -179,7 +179,7 @@ export const cart = {
   },
 };
 
-/* ------------------------------ Favoris ------------------------------ */
+/* Favoris */
 export const favorites = {
   ids: () => read("mn_favorites", []),
   has: (id) => favorites.ids().includes(id),
@@ -193,7 +193,7 @@ export const favorites = {
   },
 };
 
-/* ------------------------------ Notifications ------------------------------ */
+/* Notifications */
 export function toast({ title, text = "", image = "", link = null }) {
   let box = $(".toasts");
   if (!box) {
@@ -218,7 +218,7 @@ export function toast({ title, text = "", image = "", link = null }) {
   setTimeout(() => el.remove(), 4000);
 }
 
-/* ------------------------------ Apparition au défilement ------------------------------ */
+/* Apparition au défilement */
 const io = "IntersectionObserver" in window
   ? new IntersectionObserver(
       (entries) =>
@@ -237,7 +237,7 @@ export function reveal(root = document) {
   setTimeout(() => $$(".reveal:not(.visible)").forEach((el) => el.classList.add("visible")), 2500);
 }
 
-/* ------------------------------ Icônes (SVG) ------------------------------ */
+/* Icônes (SVG) */
 const P = {
   search: '<circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>',
   heart: '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>',

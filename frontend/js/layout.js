@@ -1,8 +1,8 @@
-/* =====================================================================
+/*
    Éléments communs à toutes les pages : bandeau, en-tête, menu mobile,
    recherche, panier latéral, pied de page, bouton WhatsApp.
-   → Pour modifier le menu, éditez la liste NAV ci-dessous.
-   ===================================================================== */
+   Le menu est défini dans la liste NAV ci-dessous.
+ */
 import { $, $$, payLogo, sizeLabel, cart, esc, favorites, icon, img, loadConfig, loadProducts, money, norm, photo, setCurrency, waLink } from "./core.js?v=3";
 
 export const NAV = [
@@ -44,7 +44,7 @@ function socialLinks(cls = "social-btn") {
     .join("");
 }
 
-/* ------------------------------ En-tête ------------------------------ */
+/* En-tête */
 function renderHeader() {
   const msgs = SHOP.announcements?.length ? SHOP.announcements : [];
   const loop = [...msgs, ...msgs, ...msgs, ...msgs].map((m) => `<span>${esc(m)} <b>✦</b></span>`).join("");
@@ -88,7 +88,7 @@ function updateCounts() {
   });
 }
 
-/* ------------------------------ Panneaux ------------------------------ */
+/* Panneaux */
 function openOverlay(html, { onClose } = {}) {
   const wrap = document.createElement("div");
   wrap.className = "overlay";
@@ -240,7 +240,7 @@ export function searchProducts(products, query) {
   });
 }
 
-/* ------------------------------ Pied de page ------------------------------ */
+/* Pied de page */
 function renderFooter() {
   const el = document.getElementById("footer");
   if (!el) return;
@@ -272,7 +272,7 @@ function renderFooter() {
     <a class="wa-float" href="${esc(waLink(SHOP.whatsapp, `Bonjour ${SHOP.name} 👋, j'aimerais avoir des informations.`))}" target="_blank" rel="noopener noreferrer" aria-label="Nous écrire sur WhatsApp">${icon("whatsapp")}</a>`;
 }
 
-/* ------------------------------ Initialisation ------------------------------ */
+/* Initialisation */
 export async function initLayout() {
   const config = await loadConfig();
   SHOP = config.shop;

@@ -68,7 +68,7 @@ $("#form-root").innerHTML = `
   </div>
 </form>`;
 
-/* ------------------------------ Rendu dynamique ------------------------------ */
+/* Rendu dynamique */
 function renderImages() {
   $("#images").innerHTML =
     p.images
@@ -98,7 +98,7 @@ const addColor = (name, hex) => {
   renderColors();
 };
 
-/* ------------------------------ Événements ------------------------------ */
+/* Événements */
 const form = $("#form");
 $("#name").addEventListener("input", (e) => !slugTouched && ($("#slug").value = slugify(e.target.value)));
 $("#slug").addEventListener("input", () => (slugTouched = true));

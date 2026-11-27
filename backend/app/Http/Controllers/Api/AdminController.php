@@ -30,7 +30,7 @@ class AdminController extends Controller
         return Str::slug($s);
     }
 
-    /* ------------------------------ Produits ------------------------------ */
+    // Produits
 
     /** Valide et nettoie les données d'un produit. Retourne [données, erreurs]. */
     private function validateProduct(array $b): array
@@ -150,7 +150,7 @@ class AdminController extends Controller
         return response()->json(['url' => '/uploads/'.$name], 201);
     }
 
-    /* ------------------------------ Commandes ------------------------------ */
+    // Commandes
 
     public function orders(): JsonResponse
     {
@@ -179,7 +179,7 @@ class AdminController extends Controller
         return response()->json(['ok' => true]);
     }
 
-    /* ------------------------------ Clientes ------------------------------ */
+    // Clientes
 
     /** Clientes = commandes regroupées par numéro de téléphone. */
     public function customers(): JsonResponse
@@ -228,7 +228,7 @@ class AdminController extends Controller
         return response()->json(['ok' => true]);
     }
 
-    /* ------------------------------ Paramètres ------------------------------ */
+    // Paramètres
 
     public function settings(): JsonResponse
     {

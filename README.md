@@ -4,28 +4,28 @@ Site e-commerce en deux parties :
 
 ```
 site-pre-a-porter/
-├── frontend/                 ← LE SITE (HTML, CSS, JavaScript) = dossier public de Laravel
+├── frontend/                 Site public (HTML, CSS, JavaScript), servi comme dossier public de Laravel
 │   ├── index.html            Accueil
 │   ├── boutique.html, nouveautes.html, promotions.html, collections.html, collection.html
 │   ├── produit.html, panier.html, commande.html, confirmation.html, favoris.html, contact.html, 404.html
 │   ├── admin/                Espace administrateur (pages HTML)
-│   ├── css/style.css         ★ Couleurs, polices, mise en page
+│   ├── css/style.css         Couleurs, polices, mise en page
 │   ├── js/                   Scripts du site et de l'admin
-│   ├── images/               ★ Vos photos (produits, bannière, logos Wave / Orange Money)
+│   ├── images/               Photos (produits, bannière, logos Wave / Orange Money)
 │   ├── uploads/              Photos envoyées depuis l'admin
 │   ├── index.php             Point d'entrée de Laravel (ne pas supprimer)
 │   └── .htaccess             Configuration pour un hébergement Apache
 │
-├── backend/                  ← LE SERVEUR : application Laravel 12 (PHP)
+├── backend/                  API et administration : application Laravel 12 (PHP)
 │   ├── app/Models/           Product, Order, Category, ShopCollection, Setting, ContactMessage, NewsletterSubscriber
 │   ├── app/Http/Controllers/Api/
 │   │   ├── PublicController.php     Catalogue, commandes, contact, newsletter
 │   │   ├── AdminAuthController.php  Connexion admin, mot de passe
 │   │   └── AdminController.php      Produits, commandes, clientes, messages, paramètres
 │   ├── app/Http/Middleware/EnsureAdmin.php   Protection des routes admin
-│   ├── routes/web.php        ★ Toutes les adresses /api/...
+│   ├── routes/web.php        Toutes les adresses /api/...
 │   ├── routes/console.php    Commandes boutique:reset et boutique:reset-password
-│   ├── config/boutique.php   ★ Réglages du 1er démarrage (nom, WhatsApp, livraison…)
+│   ├── config/boutique.php   Réglages du 1er démarrage (nom, WhatsApp, livraison…)
 │   ├── database/migrations/  Structure de la base de données
 │   ├── database/seeders/BoutiqueSeeder.php   Catalogue de départ
 │   ├── (base de données MySQL « zale_shop » dans Laragon — voir § 5)
@@ -33,8 +33,8 @@ site-pre-a-porter/
 │   └── .env                  Paramètres secrets (mot de passe admin, clé de l'application)
 │
 ├── scripts/lancer.mjs        Lanceur utilisé par « npm start »
-├── demarrer-le-site.bat      ★ Double-clic pour lancer le site
-└── autoriser-acces-telephone.bat ★ Double-clic (une seule fois) pour l'accès téléphone
+├── demarrer-le-site.bat      Double-clic pour lancer le site
+└── autoriser-acces-telephone.bat Double-clic (une seule fois) pour l'accès téléphone
 ```
 
 ## 1. Lancer le site
